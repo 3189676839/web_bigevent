@@ -38,17 +38,17 @@ function getUserInfo() {
             renderAvatar(res.data)
         },
         // 无论成功还是失败都会，最终都会调用 complete 回调函数
-        complete: function(res) {
-            // console.log('执行了complete回调函数：');
-            // console.log(res);
-            // 在complete回调函数中，可以使用res.responseJSON拿到服务器响应回来的数据】
-            if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
-                // 1.清空本地token
-                localStorage.removeItem('token')
-                    // 2.强制跳转到登陆页面
-                location.href = '../../login.html'
-            }
-        }
+        // complete: function(res) {
+        //     // console.log('执行了complete回调函数：');
+        //     // console.log(res);
+        //     // 在complete回调函数中，可以使用res.responseJSON拿到服务器响应回来的数据】
+        //     if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
+        //         // 1.清空本地token
+        //         localStorage.removeItem('token')
+        //             // 2.强制跳转到登陆页面
+        //         location.href = '../../login.html'
+        //     }
+        // }
     })
 }
 
